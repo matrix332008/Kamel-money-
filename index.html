@@ -45,7 +45,81 @@ body{
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
-} /* Install card */
+}
+a{color:var(--green);text-decoration:none}
+button{font-family:inherit}
+
+.app-shell{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 18px 16px 88px;
+  position: relative;
+}
+
+/* Header */
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 4px 2px 18px;
+}
+.lang-switch{
+  display:flex;
+  gap:4px;
+  background:#e9ebe7;
+  border-radius: 999px;
+  padding:4px;
+}
+.lang-switch button{
+  border:0;
+  background:transparent;
+  font-size:13px;
+  font-weight:700;
+  color:#5b6560;
+  padding:7px 11px;
+  border-radius:999px;
+  cursor:pointer;
+  transition:.15s;
+}
+.lang-switch button.active{
+  background:#fff;
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
+}
+.icon-btn{
+  width:40px;height:40px;border-radius:12px;border:1px solid var(--border);
+  background:#fff;display:flex;align-items:center;justify-content:center;
+  cursor:pointer;color:#46524b;
+}
+
+/* Brand */
+.brand-block{
+  text-align:center;
+  padding: 8px 0 18px;
+}
+.km-mark{
+  width:76px;height:76px;border-radius:50%;
+  background: linear-gradient(160deg, #13b673 0%, #0d9a62 100%);
+  color:white;display:flex;align-items:center;justify-content:center;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size:30px;font-weight:700;
+  margin:0 auto 14px;
+  box-shadow: 0 10px 30px rgba(13,154,98,.28);
+}
+.brand-block h1{
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 34px;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+.brand-block p{
+  color: var(--muted);
+  font-size: 14.5px;
+  margin:0;
+}
+
+/* Install card */
 .install-card{
   background: var(--card);
   border:1px solid var(--border);
@@ -74,7 +148,7 @@ body{
   border-radius:14px;
   cursor:pointer;
   display:flex;align-items:center;justify-content:center;gap:8px;
-  transition: background .15s;
+  transition: background.15s;
 }
 .install-btn:hover{background:var(--green-600)}
 .install-btn:disabled{opacity:.7;cursor:default}
@@ -109,7 +183,7 @@ body{
   letter-spacing:.06em;
   color:#728076;
 }
-.select-wrap, .amount-wrap{
+.select-wrap,.amount-wrap{
   position:relative;
 }
 .select-wrap select,
@@ -124,7 +198,7 @@ body{
   font-weight:600;
   color:var(--text);
   outline:none;
-  transition:border .15s;
+  transition:border.15s;
 }
 .select-wrap select:focus,
 .amount-wrap input:focus{border-color:#b9dcc8;background:#fff}
@@ -189,7 +263,7 @@ body{
   grid-template-columns:auto 1fr auto;
   gap:12px;
   align-items:center;
-  transition: box-shadow .15s, transform .15s, border-color .15s;
+  transition: box-shadow.15s, transform.15s, border-color.15s;
 }
 .provider-card.best{
   border-color:#a9e3c4;
@@ -255,7 +329,7 @@ body{
   max-width:var(--maxw);margin:0 auto;
   box-shadow:0 -18px 40px rgba(0,0,0,.13);
   padding:20px 18px 26px;
-  transform:translateY(105%);transition: transform .25s ease;
+  transform:translateY(105%);transition: transform.25s ease;
 }
 .settings-drawer.open{transform:translateY(0)}
 .drawer-handle{width:40px;height:5px;background:#dde3de;border-radius:99px;margin:0 auto 14px}
@@ -285,10 +359,10 @@ body{
   padding:22px 20px; max-height:82vh; overflow:auto; box-shadow:0 20px 60px rgba(0,0,0,.18);
 }
 .modal h3{margin:4px 0 10px;font-family:'Fraunces', serif;font-size:24px}
-.modal p, .modal li{font-size:14px;color:#3b4741;line-height:1.6}
-.modal .close-modal{margin-top:12px;border:0;background:#f1f4f1;padding:11px 14px;border-radius:11px;font-weight:700;cursor:pointer}
+.modal p,.modal li{font-size:14px;color:#3b4741;line-height:1.6}
+.modal.close-modal{margin-top:12px;border:0;background:#f1f4f1;padding:11px 14px;border-radius:11px;font-weight:700;cursor:pointer}
 
-/* Bottom tab bar (mobile comfort) */
+/* Bottom tab bar */
 .bottom-bar{
   position:fixed;left:0;right:0;bottom:0;z-index:30;
   background:rgba(255,255,255,.92);
@@ -312,7 +386,7 @@ body{
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
 /* Utility */
-.hidden{display:none !important}
+.hidden{display:none!important}
 .muted{color:var(--muted)}
 .badge-new{
   font-size:10.5px;font-weight:800;background:#ffe9c8;color:#7a4a00;padding:3px 7px;border-radius:999px;margin-left:6px;vertical-align:middle
@@ -320,11 +394,12 @@ body{
 .disclaimer{font-size:11.7px;color:#7b877f;text-align:center;margin-top:12px;line-height:1.5}
 
 @media (min-width: 540px){
-  .app-shell{padding-top:28px}
+ .app-shell{padding-top:28px}
 }
 
-@media (max-width: 380px){  .p-receive{font-size:15.5px}
-  .p-name{font-size:14.7px}
+@media (max-width: 380px){
+ .p-receive{font-size:15.5px}
+ .p-name{font-size:14.7px}
 }
 </style>
 </head>
@@ -339,7 +414,7 @@ body{
       <button data-lang="de">DE</button>
     </div>
     <button class="icon-btn" id="settingsBtn" aria-label="Settings">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0.33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 0 0 0-1.82-.33 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 0 0 0 9 19.4a1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 0 0 0 9 4.68a1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 0 0 0 1 1.51 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 0 0 0 19.4 9a1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 0 0 0-1.51 1z"/></svg>
     </button>
   </div>
 
@@ -424,12 +499,207 @@ body{
 </div>
 
 <!-- Bottom tab bar -->
-<!-- (settings drawer, modal, JS… يجي في الجزء 4) -->
-  function formatMoney(n, currency){
+<div class="bottom-bar">
+  <div class="bottom-bar-inner">
+    <button class="btab active" data-i18n-title="Compare">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+      <span data-i18n="tab_compare">Compare</span>
+    </button>
+    <button class="btab" id="bottomSettingsBtn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0.33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 0 0 0 4.68 15a1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 0 0 0 9 4.68a1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 0 0 0 1 1.51 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 0 0 0 19.4 9a1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 0 0 0-1.51 1z"/></svg>
+      <span data-i18n="tab_settings">Settings</span>
+    </button>
+    <button class="btab" id="bottomAboutBtn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <span data-i18n="tab_about">About</span>
+    </button>
+  </div>
+</div>
+
+<!-- Settings Drawer -->
+<div class="settings-backdrop" id="settingsBackdrop"></div>
+<div class="settings-drawer" id="settingsDrawer" role="dialog" aria-modal="true" aria-label="Settings">
+  <div class="drawer-handle"></div>
+  <h2 class="drawer-title" data-i18n="settings_title">Settings</h2>
+
+  <div class="setting-row">
+    <div class="setting-label">
+      <span data-i18n="number_format">Number format</span>
+      <small data-i18n="number_format_hint">Applies to all amounts in the app</small>
+    </div>
+    <div class="seg" id="numFormatSeg">
+      <button data-nf="western" class="active">1234.56</button>
+      <button data-nf="eastern">١٢٣٤٫٥٦</button>
+    </div>
+  </div>
+
+  <div class="setting-row">
+    <div class="setting-label">
+      <span data-i18n="ui_language">Interface language</span>
+      <small>English / Français / Deutsch</small>
+    </div>
+    <div class="seg" id="langSeg">
+      <button data-lang="en" class="active">EN</button>
+      <button data-lang="fr">FR</button>
+      <button data-lang="de">DE</button>
+    </div>
+  </div>
+
+  <div class="setting-row">
+    <div class="setting-label">
+      <span data-i18n="disclosure_label">Affiliate disclosure</span>
+      <small data-i18n="disclosure_hint">We may earn a commission when you send via a partner link. This does not affect your price.</small>
+    </div>
+  </div>
+
+  <button class="close-drawer" id="closeSettings" data-i18n="close">Close</button>
+</div>
+
+<!-- About / Privacy Modal -->
+<div class="modal-backdrop" id="infoModal">
+  <div class="modal" role="dialog" aria-modal="true">
+    <div id="infoModalBody"></div>
+    <button class="close-modal" data-i18n="close">Close</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ---------- Data ---------- */
+const SEND_COUNTRIES = [
+  { code:'CZ', name:{en:'Czech Republic',fr:'République tchèque',de:'Tschechien'}, currency:'CZK', flag:'🇨🇿'},
+  { code:'PL', name:{en:'Poland',fr:'Pologne',de:'Polen'}, currency:'PLN', flag:'🇵🇱'},
+  { code:'DE', name:{en:'Germany',fr:'Allemagne',de:'Deutschland'}, currency:'EUR', flag:'🇩🇪'},
+  { code:'FR', name:{en:'France',fr:'France',de:'Frankreich'}, currency:'EUR', flag:'🇫🇷'},
+  { code:'IT', name:{en:'Italy',fr:'Italie',de:'Italien'}, currency:'EUR', flag:'🇮🇹'},
+  { code:'ES', name:{en:'Spain',fr:'Espagne',de:'Spanien'}, currency:'EUR', flag:'🇪🇸'},
+  { code:'NL', name:{en:'Netherlands',fr:'Pays-Bas',de:'Niederlande'}, currency:'EUR', flag:'🇳🇱'},
+  { code:'BE', name:{en:'Belgium',fr:'Belgique',de:'Belgien'}, currency:'EUR', flag:'🇧🇪'},
+  { code:'GB', name:{en:'United Kingdom',fr:'Royaume-Uni',de:'Vereinigtes Königreich'}, currency:'GBP', flag:'🇬🇧'},
+  { code:'CA', name:{en:'Canada',fr:'Canada',de:'Kanada'}, currency:'CAD', flag:'🇨🇦'},
+  { code:'US', name:{en:'United States',fr:'États-Unis',de:'Vereinigte Staaten'}, currency:'USD', flag:'🇺🇸'},
+  { code:'AE', name:{en:'United Arab Emirates',fr:'Émirats arabes unis',de:'Vereinigte Arabische Emirate'}, currency:'AED', flag:'🇦🇪'},
+];
+
+const RECEIVE_COUNTRIES = [
+  { code:'TN', name:{en:'Tunisia',fr:'Tunisie',de:'Tunesien'}, currency:'TND', flag:'🇹🇳'},
+  { code:'MA', name:{en:'Morocco',fr:'Maroc',de:'Marokko'}, currency:'MAD', flag:'🇲🇦'},
+  { code:'DZ', name:{en:'Algeria',fr:'Algérie',de:'Algerien'}, currency:'DZD', flag:'🇩🇿'},
+  { code:'EG', name:{en:'Egypt',fr:'Égypte',de:'Ägypten'}, currency:'EGP', flag:'🇪🇬'},
+  { code:'JO', name:{en:'Jordan',fr:'Jordanie',de:'Jordanien'}, currency:'JOD', flag:'🇯🇴'},
+  { code:'LB', name:{en:'Lebanon',fr:'Liban',de:'Libanon'}, currency:'LBP', flag:'🇱🇧'},
+  { code:'TR', name:{en:'Turkey',fr:'Turquie',de:'Türkei'}, currency:'TRY', flag:'🇹🇷'},
+  { code:'IN', name:{en:'India',fr:'Inde',de:'Indien'}, currency:'INR', flag:'🇮🇳'},
+  { code:'PK', name:{en:'Pakistan',fr:'Pakistan',de:'Pakistan'}, currency:'PKR', flag:'🇵🇰'},
+  { code:'BD', name:{en:'Bangladesh',fr:'Bangladesh',de:'Bangladesch'}, currency:'BDT', flag:'🇧🇩'},
+  { code:'PH', name:{en:'Philippines',fr:'Philippines',de:'Philippinen'}, currency:'PHP', flag:'🇵🇭'},
+  { code:'NG', name:{en:'Nigeria',fr:'Nigéria',de:'Nigeria'}, currency:'NGN', flag:'🇳🇬'},
+];
+
+// Mid-market rates, 1 USD = X
+const USD_RATES = {
+  USD:1, EUR:0.92, GBP:0.79, CAD:1.36, AED:3.673,
+  CZK:22.8, PLN:4.02,
+  TND:3.08, MAD:9.98, DZD:134.5, EGP:49.1, JOD:0.709, LBP:89500,
+  TRY:33.9, INR:83.3, PKR:278.4, BDT:117.2, PHP:56.8, NGN:1545
+};
+
+const PROVIDERS = [
+  { id:'wise', name:'Wise', initials:'W', feePct:0.0058, fixed:0.9, minFee:1.2, spread:0.0035, speedMin: 2, speedMax: 24, color:'#d7f0e6' },
+  { id:'remitly', name:'Remitly', initials:'R', feePct:0.0, fixed:1.99, minFee:1.99, spread:0.012, speedMin: 0.25, speedMax: 4, color:'#e6eefd' },
+  { id:'revolut', name:'Revolut', initials:'Rv', feePct:0.003, fixed:0, minFee:0, spread:0.0045, speedMin: 1, speedMax: 18, color:'#dde8ff' },
+  { id:'worldremit', name:'WorldRemit', initials:'WR', feePct:0.008, fixed:1.5, minFee:1.5, spread:0.015, speedMin: 0.5, speedMax: 12, color:'#f3ecff' },
+  { id:'ria', name:'Ria', initials:'Ri', feePct:0.009, fixed:2.5, minFee:2.5, spread:0.018, speedMin: 0.25, speedMax: 8, color:'#ffe9e4' },
+  { id:'moneygram', name:'MoneyGram', initials:'MG', feePct:0.012, fixed:2.99, minFee:2.99, spread:0.022, speedMin: 0.17, speedMax: 24, color:'#fff0d8' },
+  { id:'westernunion', name:'Western Union', initials:'WU', feePct:0.014, fixed:3.49, minFee:3.49, spread:0.025, speedMin: 0.1, speedMax: 24, color:'#fff3c4' },
+];
+
+/* ---------- State ---------- */
+let state = {
+  lang: localStorage.getItem('km_lang') || 'en',
+  numberFormat: localStorage.getItem('km_nf') || 'western',
+  sendCountry: 'DE',
+  receiveCountry: 'TN',
+  amount: 500,
+  sort: 'cheap'
+};
+
+/* ---------- i18n ---------- */
+const T = {
+  app_title: {en:'Kamel Money', fr:'Kamel Money', de:'Kamel Money'},
+  tagline: {en:'Compare remittance fees in seconds.', fr:'Comparez les frais d’envoi en quelques secondes.', de:'Überweisungsgebühren in Sekunden vergleichen.'},
+  install_title: {en:'Install Kamel Money', fr:'Installer Kamel Money', de:'Kamel Money installieren'},
+  install_sub: {en:'Fast, offline-ready. Add to Home Screen.', fr:'Rapide, prêt hors ligne. Ajouter à l’écran d’accueil.', de:'Schnell, offline-fähig. Zum Startbildschirm hinzufügen.'},
+  install_button: {en:'Install App', fr:'Installer l’app', de:'App installieren'},
+  install_hint: {en:'If no prompt appears: on iOS, tap Share → Add to Home Screen.', fr:'Si aucune invite ne s’affiche : sur iOS, touchez Partager → Sur l’écran d’accueil.', de:'Falls kein Prompt erscheint: Unter iOS tippen Sie Teilen → Zum Home-Bildschirm.'},
+  send_from: {en:'Send from', fr:'Envoyer de', de:'Senden von'},
+  send_to: {en:'Send to', fr:'Envoyer vers', de:'Senden nach'},
+  you_send: {en:'You send', fr:'Vous envoyez', de:'Sie senden'},
+  live_fx: {en:'Live FX mock', fr:'Taux FX démo', de:'Live-FX Demo'},
+  sort_by: {en:'Sort by:', fr:'Trier par :', de:'Sortieren nach:'},
+  sort_cheap: {en:'Cheapest', fr:'Moins cher', de:'Günstigster'},
+  sort_fast: {en:'Fastest', fr:'Plus rapide', de:'Schnellster'},
+  sort_rate: {en:'Best rate', fr:'Meilleur taux', de:'Bester Kurs'},
+  tab_compare: {en:'Compare', fr:'Comparer', de:'Vergleich'},
+  tab_settings: {en:'Settings', fr:'Réglages', de:'Einstellungen'},
+  tab_about: {en:'About', fr:'À propos', de:'Über'},
+  settings_title: {en:'Settings', fr:'Réglages', de:'Einstellungen'},
+  number_format: {en:'Number format', fr:'Format des nombres', de:'Zahlenformat'},
+  number_format_hint: {en:'Applies to all amounts in the app', fr:'S’applique à tous les montants', de:'Gilt für alle Beträge in der App'},
+  ui_language: {en:'Interface language', fr:'Langue de l’interface', de:'Oberflächensprache'},
+  disclosure_label: {en:'Affiliate disclosure', fr:'Divulgation d’affiliation', de:'Affiliate-Hinweis'},
+  disclosure_hint: {en:'We may earn a commission when you send via a partner link. This does not affect your price.', fr:'Nous pouvons percevoir une commission si vous envoyez via un lien partenaire. Cela n’affecte pas votre prix.', de:'Wir erhalten ggf. eine Provision, wenn Sie über einen Partnerlink senden. Ihr Preis ändert sich dadurch nicht.'},
+  close: {en:'Close', fr:'Fermer', de:'Schließen'},
+  about: {en:'About', fr:'À propos', de:'Über'},
+  privacy: {en:'Privacy', fr:'Confidentialité', de:'Datenschutz'},
+  disclaimer: {en:'Rates are indicative model rates. Fees update live in this demo. Always confirm with the provider before sending.', fr:'Les taux sont indicatifs (modèle). Les frais sont mis à jour en direct dans cette démo. Confirmez toujours auprès du prestataire avant d’envoyer.', de:'Kurse sind indikative Modellkurse. Gebühren werden in dieser Demo live aktualisiert. Bitte immer beim Anbieter bestätigen, bevor Sie senden.'},
+  fee: {en:'Fee', fr:'Frais', de:'Gebühr'},
+  rate: {en:'Rate', fr:'Taux', de:'Kurs'},
+  arrives: {en:'Arrives', fr:'Arrivée', de:'Ankunft'},
+  total_to_receive: {en:'Total to receive', fr:'Total à recevoir', de:'Empfangsbetrag'},
+  send: {en:'Send', fr:'Envoyer', de:'Senden'},
+  best_value: {en:'Best value', fr:'Meilleure offre', de:'Bester Wert'},
+  fastest: {en:'Fastest', fr:'Le plus rapide', de:'Am schnellsten'},
+  min: {en:'min', fr:'min', de:'Min.'},
+  hour: {en:'hr', fr:'h', de:'Std'},
+  day: {en:'day', fr:'jour', de:'Tag'},
+  installed: {en:'App installed. Thank you!', fr:'App installée. Merci!', de:'App installiert. Danke!'},
+  link_copied: {en:'Affiliate link copied (demo).', fr:'Lien affilié copié (démo).', de:'Affiliate-Link kopiert (Demo).'},
+};
+
+function tr(key){
+  const d = T[key];
+  return d? (d[state.lang] || d.en) : key;
+}
+
+function applyI18n(){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    el.textContent = tr(el.getAttribute('data-i18n'));
+  });
+  document.documentElement.lang = state.lang;
+}
+
+/* ---------- Number formatting ---------- */
+const EASTERN_DIGITS = ['٠','١','٢','٣','٤','٥','٦','٧','٨','٩'];
+function toEastern(str){
+  return str.replace(/[0-9]/g, d => EASTERN_DIGITS[+d]).replace(/\./g, '٫').replace(/,/g, '٬');
+}
+function formatNumber(n, decimals=2){
+  const num = Number(n);
+  if(isNaN(num)) return '—';
+  const parts = num.toFixed(decimals).split('.');
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  let out = parts.join('.');
+  if(state.numberFormat === 'eastern'){
+    out = toEastern(out);
+  }
+  return out;
+}
+function formatMoney(n, currency){
   return formatNumber(n, 2) + ' ' + currency;
 }
 function parseAmountInput(v){
-  // allow comma or dot
   const clean = v.replace(/[^\d.,]/g,'').replace(',', '.');
   const n = parseFloat(clean);
   return isNaN(n)? 0 : n;
@@ -468,7 +738,235 @@ function getMidRate(fromCur, toCur){
   return toUsd / fromUsd;
 }
 
-/* Compute + render... (full JS as in file) */
+/* Compute */
+function computeQuotes(){
+  const sendC = findCountry(SEND_COUNTRIES, state.sendCountry);
+  const recC = findCountry(RECEIVE_COUNTRIES, state.receiveCountry);
+  const mid = getMidRate(sendC.currency, recC.currency);
+  const amount = state.amount || 0;
+
+  const quotes = PROVIDERS.map(p=>{
+    const wobble = 1 + (Math.sin(Date.now()/9000 + p.speedMin)*0.0004);
+    const effMid = mid * wobble;
+    const rate = effMid * (1 - p.spread);
+    const feeVariable = amount * p.feePct;
+    const fee = Math.max(p.minFee, feeVariable + p.fixed);
+    const amountAfterFee = Math.max(0, amount - fee);
+    const receive = amountAfterFee * rate;
+    const speedHours = p.speedMin + Math.random()*0.12;
+    return {
+     ...p,
+      mid: effMid,
+      rate,
+      fee,
+      receive,
+      speedHours,
+      sendCurrency: sendC.currency,
+      receiveCurrency: recC.currency
+    };
+  });
+
+  if(state.sort === 'cheap'){
+    quotes.sort((a,b)=> b.receive - a.receive);
+  } else if(state.sort === 'fast'){
+    quotes.sort((a,b)=> a.speedHours - b.speedHours);
+  } else if(state.sort === 'rate'){
+    quotes.sort((a,b)=> b.rate - a.rate);
+  }
+  return {quotes, mid, sendC, recC};
+}
+
+function speedText(h){
+  if(h < 1){
+    const m = Math.max(5, Math.round(h*60));
+    return m + ' ' + tr('min');
+  }
+  if(h < 24){
+    return (h < 2? '1' : Math.round(h)) + ' ' + tr('hour');
+  }
+  const d = Math.round(h/24*10)/10;
+  return formatNumber(d, d%1?1:0) + ' ' + tr('day');
+}
+
+function render(){
+  applyI18n();
+  populateSelects();
+  const {quotes, mid, sendC, recC} = computeQuotes();
+
+  document.getElementById('fxLine').textContent = `1 ${sendC.currency} = ${formatNumber(mid,4)} ${recC.currency}`;
+
+  const results = document.getElementById('results');
+  results.innerHTML = '';
+  const bestReceive = quotes[0]?.receive || 0;
+  const fastestSpeed = Math.min(...quotes.map(q=>q.speedHours));
+
+  quotes.forEach((q, idx)=>{
+    const isBestValue = state.sort === 'cheap' && idx === 0;
+    const isFastest = q.speedHours <= fastestSpeed + 0.001;
+
+    const card = document.createElement('div');
+    card.className = 'provider-card' + (isBestValue? ' best' : '');
+    card.innerHTML = `
+      <div class="p-avatar" style="background:${q.color}">${q.initials}</div>
+      <div class="p-main">
+        <div class="p-name">${q.name} ${isBestValue? `<span class="tag-cheap">${tr('best_value')}</span>` : ''} ${isFastest &&!isBestValue? `<span class="tag-fast">${tr('fastest')}</span>` : ''}</div>
+        <div class="p-meta">
+          <span><b>${tr('fee')}</b> ${formatMoney(q.fee, q.sendCurrency)}</span>
+          <span><b>${tr('rate')}</b> ${formatNumber(q.rate,4)}</span>
+          <span><b>${tr('arrives')}</b> ${speedText(q.speedHours)}</span>
+        </div>
+      <div class="p-right">
+        <div class="p-receive">${formatMoney(q.receive, q.receiveCurrency)}</div>
+        <div class="p-save">${tr('total_to_receive')}</div>
+      </div>
+      <button class="p-send-btn" data-provider="${q.id}">${tr('send')} → ${q.name}</button>
+    `;
+    results.appendChild(card);
+  });
+
+  results.querySelectorAll('.p-send-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      showToast(tr('link_copied'));
+    });
+  });
+}
+
+/* ---------- Events ---------- */
+document.getElementById('sendCountry').addEventListener('change', e=>{
+  state.sendCountry = e.target.value;
+  render();
+});
+document.getElementById('receiveCountry').addEventListener('change', e=>{
+  state.receiveCountry = e.target.value;
+  render();
+});
+
+const amountInput = document.getElementById('sendAmount');
+amountInput.addEventListener('input', e=>{
+  state.amount = parseAmountInput(e.target.value);
+  renderDebounced();
+});
+amountInput.addEventListener('blur', ()=>{
+  amountInput.value = formatNumber(state.amount, 2).replace(/,/g,'');
+});
+
+let renderTimer=null;
+function renderDebounced(){
+  clearTimeout(renderTimer);
+  renderTimer = setTimeout(render, 120);
+}
+
+document.getElementById('sortPills').addEventListener('click', e=>{
+  const btn = e.target.closest('button');
+  if(!btn) return;
+  state.sort = btn.dataset.sort;
+  document.querySelectorAll('#sortPills button').forEach(b=>b.classList.toggle('active', b===btn));
+  render();
+});
+
+/* Language switch */
+function setLang(lang){
+  state.lang = lang;
+  localStorage.setItem('km_lang', lang);
+  document.querySelectorAll('#langSwitch button, #langSeg button').forEach(b=>{
+    b.classList.toggle('active', b.dataset.lang === lang);
+  });
+  render();
+}
+document.getElementById('langSwitch').addEventListener('click', e=>{
+  const b = e.target.closest('button'); if(!b) return;
+  setLang(b.dataset.lang);
+});
+document.getElementById('langSeg')?.addEventListener('click', e=>{
+  const b = e.target.closest('button'); if(!b ||!b.dataset.lang) return;
+  setLang(b.dataset.lang);
+});
+
+/* Settings drawer */
+const drawer = document.getElementById('settingsDrawer');
+const backdrop = document.getElementById('settingsBackdrop');
+function openSettings(){
+  drawer.classList.add('open');
+  backdrop.classList.add('open');
+}
+function closeSettings(){
+  drawer.classList.remove('open');
+  backdrop.classList.remove('open');
+}
+document.getElementById('settingsBtn').addEventListener('click', openSettings);
+document.getElementById('bottomSettingsBtn').addEventListener('click', openSettings);
+document.getElementById('closeSettings').addEventListener('click', closeSettings);
+backdrop.addEventListener('click', closeSettings);
+
+/* Number format toggle */
+document.getElementById('numFormatSeg').addEventListener('click', e=>{
+  const b = e.target.closest('button'); if(!b) return;
+  state.numberFormat = b.dataset.nf;
+  localStorage.setItem('km_nf', state.numberFormat);
+  document.querySelectorAll('#numFormatSeg button').forEach(x=>x.classList.toggle('active', x===b));
+  render();
+});
+
+/* Info modals */
+const infoModal = document.getElementById('infoModal');
+const infoBody = document.getElementById('infoModalBody');
+
+function openInfo(html){
+  infoBody.innerHTML = html;
+  infoModal.classList.add('open');
+}
+infoModal.addEventListener('click', e=>{
+  if(e.target === infoModal || e.target.classList.contains('close-modal')) infoModal.classList.remove('open');
+});
+
+document.getElementById('aboutLink').addEventListener('click', e=>{e.preventDefault(); showAbout();});
+document.getElementById('bottomAboutBtn').addEventListener('click', showAbout);
+function showAbout(){
+  openInfo(`
+    <h3>Kamel Money</h3>
+    <p>${state.lang==='fr'? 'Kamel Money compare instantanément 7 opérateurs de transfert pour les corridors MENA, Asie du Sud et Afrique de l’Ouest. Nous affichons frais, taux réels et délais de livraison, pour que vous choisissiez la meilleure offre.' :
+      state.lang==='de'? 'Kamel Money vergleicht sofort 7 Überweisungsanbieter für MENA, Südasien und Westafrika. Wir zeigen Gebühren, echte Kurse und Liefergeschwindigkeit, damit Sie das beste Angebot wählen.' :
+      'Kamel Money instantly compares 7 remittance operators for MENA, South Asia and West Africa corridors. We show fees, real rates and delivery speed, so you pick the best deal.'}
+    </p>
+    <p style="color:#5b6a61;font-size:13px">Version 1.2 • PWA • Offline cache enabled</p>
+    <button class="close-modal" onclick="document.getElementById('infoModal').classList.remove('open')">${tr('close')}</button>
+  `);
+}
+
+document.getElementById('privacyLink').addEventListener('click', e=>{
+  e.preventDefault();
+  openInfo(`
+    <h3>${tr('privacy')}</h3>
+    <p>${state.lang==='fr'? "Kamel Money ne collecte aucune donnée personnelle. Les comparaisons sont effectuées localement sur votre appareil. Nous utilisons un stockage local uniquement pour mémoriser votre langue et votre format de nombre."
+      : state.lang==='de'? "Kamel Money sammelt keine personenbezogenen Daten. Vergleiche erfolgen lokal auf Ihrem Gerät. Wir nutzen lokalen Speicher nur, um Sprache und Zahlenformat zu speichern."
+      : "Kamel Money does not collect personal data. Comparisons run locally on your device. We use local storage only to remember your language and number format."}</p>
+    <p>${state.lang==='fr'? "Cookies publicitaires : si vous voyez des annonces AdSense, Google peut utiliser des cookies pour la personnalisation. Vous pouvez les refuser à tout moment."
+      : state.lang==='de'? "Werbe-Cookies: Wenn AdSense-Anzeigen erscheinen, kann Google Cookies zur Personalisierung verwenden. Sie können diese jederzeit ablehnen."
+      : "Advertising cookies: If AdSense ads are shown, Google may use cookies for personalization. You may opt out at any time."}</p>
+    <p>Contact: privacy@kamelmoney.example</p>
+    <button class="close-modal" onclick="document.getElementById('infoModal').classList.remove('open')">${tr('close')}</button>
+  `);
+});
+
+document.getElementById('adsLink').addEventListener('click', e=>{
+  e.preventDefault();
+  openInfo(`
+    <h3>AdSense & Affiliate Disclosure</h3>
+    <p>This demo is AdSense-ready. Ad slots can be placed between results securely and in compliance with policy. No personal financial data is collected.</p>
+    <p>Affiliate links: We may earn a commission if you complete a transfer through a partner. This never changes the price you see.</p>
+    <button class="close-modal" onclick="document.getElementById('infoModal').classList.remove('open')">${tr('close')}</button>
+  `);
+});
+
+/* Toast */
+let toastTimer;
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=> t.classList.remove('show'), 2100);
+}
 
 /* ---------- PWA Install ---------- */
 let deferredPrompt = null;
@@ -500,7 +998,16 @@ installBtn.addEventListener('click', async ()=>{
   }
 });
 
-/* Service Worker + Init */
+window.addEventListener('appinstalled', ()=>{
+  document.getElementById('installCard').style.display='none';
+  showToast(tr('installed'));
+});
+
+if(/iphone|ipad|ipod/i.test(navigator.userAgent) &&!window.matchMedia('(display-mode: standalone)').matches){
+  installHint.style.fontWeight = '700';
+}
+
+/* Service Worker */
 if('serviceWorker' in navigator){
   const swCode = `
     const CACHE='km-v1';
@@ -514,6 +1021,7 @@ if('serviceWorker' in navigator){
   navigator.serviceWorker.register(swUrl).catch(()=>{});
 }
 
+/* Init */
 function init(){
   document.querySelectorAll('[data-lang]').forEach(b=>{
     b.classList.toggle('active', b.dataset.lang === state.lang);
@@ -523,7 +1031,6 @@ function init(){
   setInterval(()=>{ render(); }, 6500);
 }
 init();
-
 </script>
 </body>
 </html>
