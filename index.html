@@ -392,7 +392,8 @@ button{font-family:inherit}
 }
 </style>
 </head>
-<body><div class="app-shell" id="app">
+<body>
+<div class="app-shell" id="app">
   <!-- Top bar -->
   <div class="topbar">
     <div class="lang-switch" id="langSwitch" aria-label="Language">
@@ -402,7 +403,7 @@ button{font-family:inherit}
       <button data-lang="de">🇩🇪 DE</button>
     </div>
     <button class="icon-btn" id="settingsBtn" aria-label="Settings">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 0 0 0 9 19.4a1.65 0 0 0-1.82.33l-.06.06a2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06A1.65 1.65 0 0 0 9 4.68a1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 0 0 0 1 1.51 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      <svg width="20" height="20" viewBox="0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 0 0 0 9 19.4a1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 0 0 0 4.68 15a1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 0 0 0 9 4.68a1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 0 0 0 1 1.51 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 0 0 0 19.4 9a1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 0 0 0-1.51 1z"/></svg>
     </button>
   </div>
 
@@ -417,7 +418,7 @@ button{font-family:inherit}
   <div class="install-card" id="installCard">
     <div class="install-row">
       <div class="install-icon">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       </div>
       <div class="install-copy">
         <b data-i18n="install_title">Install Kamel Money</b>
@@ -459,11 +460,24 @@ button{font-family:inherit}
     </div>
 
     <div class="help-row">
-      <span><span class="live-dot"></span><span data-i18n="live_fx">Live FX mock</span></span>
+      <span><span class="live-dot"></span><span data-i18n="live_fx">Live FX</span></span>
       <span id="fxLine" class="muted">1 EUR = 3.32 TND</span>
     </div>
   </div>
 
+  <!-- AdSense – Top – replace ca-pub-XXXXXXXXXX with your ID -->
+  <!--
+  <div style="margin:14px 0;text-align:center">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXX"
+         data-ad-slot="1111111111"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  -->
   <!-- Sort -->
   <div class="sort-row">
     <div class="sort-label" data-i18n="sort_by">Sort by:</div>
@@ -495,7 +509,7 @@ button{font-family:inherit}
       <span data-i18n="tab_compare">Compare</span>
     </button>
     <button class="btab" id="bottomSettingsBtn">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 0 0 0 1 1.51 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 0 0 0-1.51 1z"/></svg>
+      <svg width="20" height="20" viewBox="0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0.33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 0 0-1.82-.33 1.65 1.65 0 0-1 1.51V21a2 2 0 1-4 0v-.09A1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 9 4.68a1.65 1.65 0 1-1.51V3a2 2 0 1 4 0v.09a1.65 0 1 1.51 1.65 1.65 0 0 1.82-.33l.06-.06a2 0 1 2.83 2.83l-.06.06A1.65 1.65 0 19.4 9a1.65 1.65 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 0 0-1.51 1z"/></svg>
       <span data-i18n="tab_settings">Settings</span>
     </button>
     <button class="btab" id="bottomAboutBtn">
@@ -553,7 +567,9 @@ button{font-family:inherit}
   </div>
 </div>
 
-<div class="toast" id="toast"></div><script>
+<div class="toast" id="toast"></div>
+
+<script>
 /* ---------- Data ---------- */
 const SEND_COUNTRIES = [
   { code:'CZ', name:{en:'Czech Republic',fr:'République tchèque',de:'Tschechien',cs:'Česko'}, currency:'CZK', flag:'🇨🇿'},
@@ -606,7 +622,7 @@ const PROVIDERS = [
 let state = {
   lang: localStorage.getItem('km_lang') || 'cs',
   numberFormat: localStorage.getItem('km_nf') || 'western',
-  sendCountry: 'DE',
+  sendCountry: 'CZ',
   receiveCountry: 'TN',
   amount: 500,
   sort: 'cheap'
@@ -623,7 +639,7 @@ const T = {
   send_from: {en:'Send from', fr:'Envoyer de', de:'Senden von', cs:'Odeslat z'},
   send_to: {en:'Send to', fr:'Envoyer vers', de:'Senden nach', cs:'Odeslat do'},
   you_send: {en:'You send', fr:'Vous envoyez', de:'Sie senden', cs:'Odesíláte'},
-  live_fx: {en:'Live FX mock', fr:'Taux FX démo', de:'Live-FX Demo', cs:'Live FX demo'},
+  live_fx: {en:'Indicative rate', fr:'Taux indicatif', de:'Richtkurs', cs:'Orientační kurz'},
   sort_by: {en:'Sort by:', fr:'Trier par :', de:'Sortieren nach:', cs:'Seřadit podle:'},
   sort_cheap: {en:'Cheapest', fr:'Moins cher', de:'Günstigster', cs:'Nejlevnější'},
   sort_fast: {en:'Fastest', fr:'Plus rapide', de:'Schnellster', cs:'Nejrychlejší'},
@@ -652,7 +668,7 @@ const T = {
   hour: {en:'hr', fr:'h', de:'Std', cs:'h'},
   day: {en:'day', fr:'jour', de:'Tag', cs:'den'},
   installed: {en:'App installed. Thank you!', fr:'App installée. Merci!', de:'App installiert. Danke!', cs:'Aplikace nainstalována. Děkujeme!'},
-  link_copied: {en:'Affiliate link copied (demo).', fr:'Lien affilié copié (démo).', de:'Affiliate-Link kopiert (Demo).', cs:'Affiliate odkaz zkopírován (demo).'},
+  link_copied: {en:'Add your affiliate link in the code.', fr:'Ajoutez votre lien affilié dans le code.', de:'Affiliate-Link im Code einfügen.', cs:'Vložte svůj affiliate odkaz do kódu – demo režim.'},
 };
 
 function tr(key){
@@ -723,9 +739,7 @@ function getMidRate(fromCur, toCur){
   const toUsd = USD_RATES[toCur];
   if(!fromUsd ||!toUsd) return 1;
   return toUsd / fromUsd;
-}
-
-/* Compute */
+}/* Compute */
 function computeQuotes(){
   const sendC = findCountry(SEND_COUNTRIES, state.sendCountry);
   const recC = findCountry(RECEIVE_COUNTRIES, state.receiveCountry);
@@ -733,16 +747,15 @@ function computeQuotes(){
   const amount = state.amount || 0;
 
   const quotes = PROVIDERS.map(p=>{
-    const wobble = 1 + (Math.sin(Date.now()/9000 + p.speedMin)*0.0004);
-    const effMid = mid * wobble;
+    const effMid = mid;
     const rate = effMid * (1 - p.spread);
     const feeVariable = amount * p.feePct;
     const fee = Math.max(p.minFee, feeVariable + p.fixed);
     const amountAfterFee = Math.max(0, amount - fee);
     const receive = amountAfterFee * rate;
-    const speedHours = p.speedMin + Math.random()*0.12;
+    const speedHours = p.speedMin;
     return {
-    ...p,
+      ...p,
       mid: effMid,
       rate,
       fee,
@@ -769,11 +782,13 @@ function speedText(h){
     return m + ' ' + tr('min');
   }
   if(h < 24){
-    return (h < 2? '1' : Math.round(h)) + ' ' + tr('hour');
+    return (h < 2 ? '1' : Math.round(h)) + ' ' + tr('hour');
   }
   const d = Math.round(h/24*10)/10;
   return formatNumber(d, d%1?1:0) + ' ' + tr('day');
-}function render(){
+}
+
+function render(){
   applyI18n();
   populateSelects();
   const {quotes, mid, sendC, recC} = computeQuotes();
@@ -912,6 +927,7 @@ function showAbout(){
     <h3>Kamel Money</h3>
     <p>${state.lang==='fr' ? 'Kamel Money compare instantanément 7 opérateurs de transfert pour les corridors MENA, Asie du Sud et Afrique de l’Ouest.' :
       state.lang==='de' ? 'Kamel Money vergleicht sofort 7 Überweisungsanbieter für MENA, Südasien und Westafrika.' :
+      state.lang==='cs' ? 'Kamel Money okamžitě porovná 7 poskytovatelů převodů pro MENA, jižní Asii a západní Afriku.' :
       'Kamel Money instantly compares 7 remittance operators for MENA, South Asia and West Africa corridors.'}
     </p>
     <p style="color:#5b6a61;font-size:13px">Version 1.2 • PWA • Offline cache enabled</p>
@@ -923,7 +939,7 @@ document.getElementById('privacyLink').addEventListener('click', e=>{
   e.preventDefault();
   openInfo(`
     <h3>${tr('privacy')}</h3>
-    <p>${state.lang==='fr' ? "Kamel Money ne collecte aucune donnée personnelle." : state.lang==='de' ? "Kamel Money sammelt keine personenbezogenen Daten." : "Kamel Money does not collect personal data."}</p>
+    <p>${state.lang==='fr' ? "Kamel Money ne collecte aucune donnée personnelle." : state.lang==='de' ? "Kamel Money sammelt keine personenbezogenen Daten." : state.lang==='cs' ? "Kamel Money neshromažďuje žádné osobní údaje." : "Kamel Money does not collect personal data."}</p>
     <p>Contact: privacy@kamelmoney.example</p>
     <button class="close-modal" onclick="document.getElementById('infoModal').classList.remove('open')">${tr('close')}</button>
   `);
@@ -933,7 +949,8 @@ document.getElementById('adsLink').addEventListener('click', e=>{
   e.preventDefault();
   openInfo(`
     <h3>AdSense & Affiliate Disclosure</h3>
-    <p>This demo is AdSense-ready.</p>
+    <p>This demo is AdSense-ready. Replace ca-pub-XXXXXXXXXX with your publisher ID.</p>
+    <p>Affiliate links: We may earn a commission if you complete a transfer through a partner. This never changes the price you see.</p>
     <button class="close-modal" onclick="document.getElementById('infoModal').classList.remove('open')">${tr('close')}</button>
   `);
 });
@@ -973,7 +990,7 @@ installBtn.addEventListener('click', async ()=>{
   } else {
     const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
     showToast(isIOS 
-      ? (state.lang==='fr' ? 'Partager → Sur l’écran d’accueil' : state.lang==='de' ? 'Teilen → Zum Home-Bildschirm' : 'Tap Share → Add to Home Screen')
+      ? (state.lang==='fr' ? 'Partager → Sur l’écran d’accueil' : state.lang==='de' ? 'Teilen → Zum Home-Bildschirm' : state.lang==='cs' ? 'Sdílet → Přidat na plochu' : 'Tap Share → Add to Home Screen')
       : 'App installable from your browser menu.');
   }
 });
